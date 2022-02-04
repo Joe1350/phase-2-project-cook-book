@@ -1,0 +1,41 @@
+{
+    "recipies": [
+        {
+            "id": "1",
+            "source": "https://www.lanascooking.com/spanish-rice-chicken-soup/",
+            "Author": "Lana Stuart",
+            "image": "https://www.lanascooking.com/wp-content/uploads/2014/01/spanish-rice-and-chicken-soup-feature.jpg",
+            "servings": "4",
+            "caloriesPerServing": "370 Cal",
+            "category": "soups and stews",
+            "prepTime": "10 minutes",
+            "cookTime": "30 minutes",
+            "totalTime": "40 minutes",
+            "ingredients": [
+                "1 tablespoon butter",
+                "1 tablespoon olive oil",
+                "1 medium onion chopped",
+                "2 ribs celery chopped",
+                "2 medium garlic cloves minced",
+                "½ cup chopped fresh cilantro",
+                "14.5 ounces canned whole peeled tomatoes with their juice",
+                "1 cup rice",
+                "2 tablespoons taco seasoning",
+                "8 cups chicken broth",
+                "2 cups cooked diced chicken",
+                "1 teaspoon salt",
+                "½ teaspoon pepper"
+            ],
+            "directions": [
+                "Place a deep saucepan or soup pot over medium high heat. Add the oil and butter.",
+                "When the butter has melted, add the onion and celery. Cook, stirring frequently until the onion has wilted. Take care not to brown the onion.",
+                "Add the garlic and cook for one more minute.",
+                "Add the tomatoes and cilantro. Cook for an additional 2-3 minutes while stirring and breaking up the tomatoes with a spoon.",
+                "Add the rice, taco seasoning, and cilantro. Stir well. Add the chicken broth, chicken, salt, and pepper.",
+                "Bring the mixture to a boil, then reduce the heat to low. Cover and cook for 18-20 minutes or until the rice is done.",
+                "Serve topped with additional cilantro"
+            ],
+            "notes": []
+        }
+    ]
+}
