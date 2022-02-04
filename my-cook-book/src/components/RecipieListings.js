@@ -29,7 +29,7 @@ function RecipieListings({ recipie }) {
                 <small>
                     Total Time: {recipie.totalTime} | {recipie.calories} Calories per serving | {recipie.servings} servings
                 </small>
-                <p>{recipie.description}</p>
+                <p>{recipie.description ? recipie.description : null}</p>
             </div>
         </article>
 

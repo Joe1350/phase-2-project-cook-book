@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function RecipieForm() {
     const [formData, setFormData] = useState({
         source: "",
+        name: "",
         author: "",
         image: "",
         servings: "",
@@ -46,6 +47,17 @@ function RecipieForm() {
                     onChange={handleFormChange}
                 />
                 <br></br>
+                <label htmlFor="name">Name: </label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Recipie name"
+                    value={formData.author}
+                    onChange={handleFormChange}
+                    required
+                />
+                <br></br>
                 <label htmlFor="author">Author: </label>
                 <input
                     type="text"
@@ -54,6 +66,7 @@ function RecipieForm() {
                     placeholder="Who created this recipie"
                     value={formData.author}
                     onChange={handleFormChange}
+                    required
                 />
                 <br></br>
                 <label htmlFor="image">Image: </label>
@@ -75,6 +88,7 @@ function RecipieForm() {
                     placeholder="servings"
                     value={formData.servings}
                     onChange={handleFormChange}
+                    required
                 />
                 <br></br>
                 <label htmlFor="calories">Calories: </label>
@@ -85,6 +99,7 @@ function RecipieForm() {
                     placeholder="calories per serving"
                     value={formData.calories}
                     onChange={handleFormChange}
+                    required
                 />
                 <br></br>
                 <br></br>
@@ -96,6 +111,7 @@ function RecipieForm() {
                     placeholder="In minutes"
                     value={formData.prepTime}
                     onChange={handleFormChange}
+                    required
                 />
                 <br></br>
                 <label htmlFor="cookTime">Cook Time: </label>
@@ -106,6 +122,7 @@ function RecipieForm() {
                     placeholder="In minutes"
                     value={formData.cookTime}
                     onChange={handleFormChange}
+                    required
                 />
                 <br></br>
                 <br></br>
