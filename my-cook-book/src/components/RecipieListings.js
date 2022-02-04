@@ -32,8 +32,6 @@ function RecipieListings({ recipie }) {
                 <p>{recipie.description ? recipie.description : null}</p>
             </div>
         </article>
-
-        
     )
 }
 
