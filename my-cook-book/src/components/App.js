@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
+import Header from "./Header";
 import NavBar from "./NavBar";
 import HomePage from "./HomePage";
 import RecipiesList from "./RecipiesList";
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       <NavBar />
       <Switch>
         <Route path="/recipies">
