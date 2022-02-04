@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import RecipiesList from "./RecipiesList";
 import { Route, Switch } from "react-router-dom";
+import NavBar from "./NavBar";
 import HomePage from "./HomePage";
+import RecipiesList from "./RecipiesList";
 import RecipieForm from "./RecipieForm";
 
 function App() {
@@ -14,17 +15,20 @@ function App() {
   }, [])
 
   return (
-    <Switch>
-      <Route path="/recipies">
-        <RecipiesList recipies={recipies} />
-      </Route>
-      <Route path="/add-a-recipie">
-        <RecipieForm />
-      </Route>
-      <Route path="/">
-        <HomePage />
-      </Route>
-    </Switch>
+    <div>
+      <NavBar />
+      <Switch>
+        <Route path="/recipies">
+          <RecipiesList recipies={recipies} />
+        </Route>
+        <Route path="/add-a-recipie">
+          <RecipieForm />
+        </Route>
+        <Route path="/">
+          <HomePage />
+        </Route>
+      </Switch>
+    </div>
   );
 }
 
