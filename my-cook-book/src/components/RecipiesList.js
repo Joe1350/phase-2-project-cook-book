@@ -1,13 +1,13 @@
 import React from "react";
-import RecipieDetails from "./RecipieDetails";
+import RecipieListings from "./RecipieListings";
 
 function RecipiesList({ recipies }) {
     const recipiesList = recipies.map(recipie => {
-        return <RecipieDetails key={recipie.id} recipie={recipie} />
+        return <RecipieListings key={recipie.id} recipie={recipie} />
     })
 
     return (
-        <div>
+        <div style={{ marginTop: "25px" }}>
             {recipiesList}
         </div>
     )
