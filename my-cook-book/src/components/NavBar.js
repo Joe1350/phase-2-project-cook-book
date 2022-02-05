@@ -2,52 +2,35 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
-    const linkStyles = {
-        display: "inline-block",
-        width: "100px",
-        padding: "12px",
-        margin: "0 6px 6px",
-        background: "firebrick",
-        textDecoration: "none",
-        color: "cornsilk",
-        textAlign: "center",
+    const activeStyles = {
+        background: 'gray',
+        color: 'black',
+        boxShadow: "2px 2px 10px black"
     };
 
     return (
         <div>
             <NavLink
+                id="home"
                 to="/"
                 exact
-                style={linkStyles}
-                activeStyle={{
-                    background: 'gray',
-                    color: 'black',
-                    boxShadow: "3px 3px 10px black"
-                }}
+                activeStyle={activeStyles}
             >
                 Home
             </NavLink>
             <NavLink
+                id="recipies"
                 to="/recipies"
                 exact
-                style={linkStyles}
-                activeStyle={{
-                    background: 'gray',
-                    color: 'black',
-                    boxShadow: "3px 3px 10px black"
-                }}
+                activeStyle={activeStyles}
             >
                 Recipies
             </NavLink>
             <NavLink
+                id="add-a-recipie"
                 to="/add-a-recipie"
                 exact
-                style={linkStyles}
-                activeStyle={{
-                    background: '#7D7D78',
-                    color: '#000',
-                    boxShadow: "3px 3px 10px black"
-                }}
+                activeStyle={activeStyles}
             >
                 Add a Recipie
             </NavLink>
