@@ -9,6 +9,7 @@ function RecipieListings({ recipie }) {
         <article
             style={{
                 display: "flex",
+                backgroundColor: "rgba(255, 255, 255, 1)",
                 border: "solid black 1px",
                 width: "70%",
                 marginLeft: "10%",

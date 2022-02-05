@@ -80,7 +80,7 @@ function RecipieForm({ onSetRecipies }) {
     }
 
     return (
-        <div>
+        <div id="form">
             <h2>Add a New Recipie</h2>
             <form onSubmit={handleSubmitForm}>
                 <label htmlFor="name">Name: </label>
