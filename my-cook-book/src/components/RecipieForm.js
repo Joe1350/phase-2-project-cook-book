@@ -11,8 +11,8 @@ function RecipieForm() {
         prepTime: "",
         cookTime: "",
     })
-    const [ingredientInputList, setIngredientInputList] = useState([{ ingredient: "" }])
-    const [directionsInputList, setDirectionInputList] = useState([{ direction: "" }])
+    const [ingredientInputList, setIngredientInputList] = useState([""])
+    const [directionsInputList, setDirectionInputList] = useState([""])
 
     function handleFormChange(e) {
         setFormData({
@@ -22,27 +22,25 @@ function RecipieForm() {
     }
 
     function handleIngredientInputChange(e, index) {
-        const { name, value } = e.target
-        const list = [...ingredientInputList]
-        list[index][name] = value
-        setIngredientInputList(list)
+        const ingredientsList = [...ingredientInputList]
+        ingredientsList[index] = e.target.value
+        setIngredientInputList(ingredientsList)
     }
 
     function handleAddIngredientInputFieldClick(e) {
         e.preventDefault()
-        setIngredientInputList([...ingredientInputList, { ingredient: "" }])
+        setIngredientInputList([...ingredientInputList, e.target.value])
     }
 
     function handleDirectionInputChange(e, index) {
-        const { name, value } = e.target
-        const list = [...directionsInputList]
-        list[index][name] = value
-        setDirectionInputList(list)
+        const directionsList = [...directionsInputList]
+        directionsList[index] = e.target.value
+        setDirectionInputList(directionsList)
     }
 
     function handleAddDirectionInputFieldClick(e) {
         e.preventDefault()
-        setDirectionInputList([...directionsInputList, { direction: "" }])
+        setDirectionInputList([...directionsInputList, e.target.value])
     }
 
     return (
@@ -147,10 +145,10 @@ function RecipieForm() {
                     </p>
                     {ingredientInputList.map((value, i) => {
                         return (
-                            <div key={`${i}-${value}`}>
+                            <div key={`${i}ingredient`}>
                                 <input
                                     name="ingredient"
-                                    value={value.ingredient}
+                                    value={value}
                                     onChange={e => handleIngredientInputChange(e, i)}
                                 />
                                 {
@@ -171,10 +169,10 @@ function RecipieForm() {
                     <p>Add one step per line</p>
                     {directionsInputList.map((value, i) => {
                         return (
-                            <div key={`${i},${value}`}>
+                            <div key={`${i}direction`}>
                                 <input
                                     name="directions"
-                                    value={value.direction}
+                                    value={value}
                                     onChange={e => handleDirectionInputChange(e, i)}
                                 />
                                 {
