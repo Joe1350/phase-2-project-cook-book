@@ -27,12 +27,12 @@ function RecipieListings({ recipie }) {
             />
             <div style={{ marginRight: "10px" }}>
                 <h2>{recipie.name}</h2>
-                <small>{recipie.author ? recipie.author : null}</small>
+                <small>{recipie.author}</small>
                 <br></br>
                 <small>
                     Total Time: {recipie.totalTime} | {recipie.calories} Calories per serving | {recipie.servings} servings
                 </small>
-                <p>{recipie.description ? recipie.description : null}</p>
+                <p>{recipie.description}</p>
             </div>
         </article>
     )
