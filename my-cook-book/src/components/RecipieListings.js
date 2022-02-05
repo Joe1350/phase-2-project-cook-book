@@ -4,12 +4,13 @@ function RecipieListings({ recipie }) {
     function handleShowDetails() {
         console.log('I was clicked')
     }
+
     return (
         <article
             style={{
                 display: "flex",
                 border: "solid black 1px",
-                width: "80%",
+                width: "70%",
                 marginLeft: "10%"
             }}
             onClick={handleShowDetails}
@@ -18,11 +19,13 @@ function RecipieListings({ recipie }) {
                 style={{
                     width: "120px",
                     height: "100%",
-                    margin: "10px"
+                    margin: "auto",
+                    marginLeft: "10px",
+                    marginRight: "10px"
                 }}
                 src={recipie.image}
             />
-            <div>
+            <div style={{ marginRight: "10px" }}>
                 <h2>{recipie.name}</h2>
                 <small>{recipie.author ? recipie.author : null}</small>
                 <br></br>

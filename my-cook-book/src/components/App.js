@@ -12,9 +12,10 @@ import RecipieForm from "./RecipieForm";
 // get RecipieDetails component written and set up
   // making onClick work in recipieListings
   // figure out the route and page change
-// get the document title dynamic
+// make the document title dynamic
 // write home page
 // enter a couple more recipies
+// set styles
 
 function App() {
   const [recipies, setRecipies] = useState([])
