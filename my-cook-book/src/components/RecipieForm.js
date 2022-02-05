@@ -40,7 +40,7 @@ function RecipieForm() {
         setIngredientInputList(list)
     }
 
-    function handleAddIngredientInputClick(e) {
+    function handleAddIngredientInputFieldClick(e) {
         e.preventDefault()
         setIngredientInputList([...ingredientInputList, { ingredient: "" }])
     }
@@ -152,13 +152,21 @@ function RecipieForm() {
                     </p>
                     {ingredientInputList.map((value, i) => {
                         return (
-                            <div key={value}>
+                            <div key={value, i}>
                                 <input
                                     name="ingredient"
                                     value={value.ingredient}
                                     onChange={e => handleIngredientInputChange(e, i)}
                                 />
-                                {ingredientInputList.length - 1 === i ? <button onClick={handleAddIngredientInputClick}>Add New Ingredient</button> : null}
+                                {
+                                    ingredientInputList.length - 1 === i ?
+                                    <button
+                                        onClick={handleAddIngredientInputFieldClick}
+                                    >
+                                        Add New Ingredient
+                                    </button> :
+                                    null
+                                }
                             </div>
                         )
                     })}
