@@ -20,11 +20,10 @@ function RecipieListings({ recipies }) {
                             style={{
                                 width: "25%",
                                 height: "100%",
-                                margin: "auto",
-                                marginLeft: "10px",
-                                marginRight: "10px",
-                                marginTop: "10px",
-                                marginBottom: "10px"
+                                display: "block",
+                                marginTop: "auto",
+                                marginBottom: "auto",
+                                padding: "10px"
                             }}
                             src={recipie.image}
                         />
