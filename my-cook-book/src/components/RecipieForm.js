@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function RecipieForm() {
     const [formData, setFormData] = useState({
@@ -10,21 +10,8 @@ function RecipieForm() {
         calories: "",
         prepTime: "",
         cookTime: "",
-        // ingredients: {},
-        // directrions: []
     })
     const [ingredientInputList, setIngredientInputList] = useState([{ ingredient: "" }])
-
-    console.log(ingredientInputList)
-    console.log(formData.ingredients)
-
-    // useEffect(() => {
-    //     setFormData({
-    //         ...formData,
-    //         [formData.ingredients]: ingredientInputList
-    //     })
-    //     console.log(formData.ingredients)
-    // }, [ingredientInputList])
 
     function handleFormChange(e) {
         setFormData({
