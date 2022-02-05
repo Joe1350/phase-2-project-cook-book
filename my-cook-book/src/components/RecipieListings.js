@@ -30,7 +30,7 @@ function RecipieListings({ recipie }) {
                 <small>{recipie.author}</small>
                 <br></br>
                 <small>
-                    Total Time: {recipie.totalTime} | {recipie.calories} Calories per serving | {recipie.servings} servings
+                    Total Time: {recipie.totalTime} minutes | {recipie.calories} Calories per serving | {recipie.servings} servings
                 </small>
                 <p>{recipie.description}</p>
             </div>

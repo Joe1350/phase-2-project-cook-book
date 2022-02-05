@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // this most certainly needs to be broken up in to components
 
-function RecipieForm() {
+function RecipieForm({ onSetRecipies }) {
     const [formData, setFormData] = useState({
         source: "",
         name: "",
@@ -56,14 +56,15 @@ function RecipieForm() {
             image: formData.image,
             name: formData.name,
             description: formData.description,
-            servings: formData.servings,
-            calories: formData.calories,
-            // category
-            prepTime: prepTimeInput,
-            cookTime: formData.cookTime,
-            totalTime: prepTimeInput + formData.cookTime,
+            servings: parseInt(formData.servings),
+            calories: parseInt(formData.calories),
+            category: "", // formData.category,
+            prepTime: parseInt(prepTimeInput),
+            cookTime: parseInt(formData.cookTime),
+            totalTime: (parseInt(prepTimeInput) + parseInt(formData.cookTime)),
             ingredients: ingredientInputList,
-            directions: directionsInputList
+            directions: directionsInputList,
+            notes: []
         }
         fetch("http://localhost:3001/recipies", {
             method: "POST",
@@ -73,7 +74,7 @@ function RecipieForm() {
             body: JSON.stringify(newRecipie)
         })
         .then(r => r.json())
-        .then(data => console.log(data))
+        .then(newRecipie => onSetRecipies(newRecipie))
         // setRecipies(newRecipie) ?
         // I also want to be redirected to the recipieDetails page on submit
     }
@@ -88,7 +89,7 @@ function RecipieForm() {
                     name="name"
                     id="name"
                     placeholder="Recipie name"
-                    value={formData.author}
+                    value={formData.name}
                     onChange={handleFormChange}
                     required
                 />

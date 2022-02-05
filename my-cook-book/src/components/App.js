@@ -7,8 +7,7 @@ import RecipiesList from "./RecipiesList";
 import RecipieForm from "./RecipieForm";
 
 // things to do
-// maybe useContext on the form and/or recipies
-// get post request and submit button working
+// maybe useContext on the form
 // get RecipieDetails component written and set up
   // making onClick work in recipieListings
   // figure out the route and path change
@@ -28,6 +27,10 @@ function App() {
     .then(setRecipies)
   }, [])
 
+  function handleSetRecipies(newRecipie) {
+    setRecipies(...recipies, newRecipie)
+  }
+
   return (
     <div>
       <Header />
@@ -37,7 +40,7 @@ function App() {
           <RecipiesList recipies={recipies} />
         </Route>
         <Route path="/add-a-recipie">
-          <RecipieForm />
+          <RecipieForm onSetRecipies={handleSetRecipies} />
         </Route>
         <Route path="/">
           <HomePage />
