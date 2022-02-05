@@ -1,14 +1,19 @@
 import React from "react";
+import { Route, useRouteMatch } from "react-router-dom";
 import RecipieListings from "./RecipieListings";
+import RecipieDetails from "./RecipieDetails";
 
 function RecipiesList({ recipies }) {
-    const recipiesList = recipies.map(recipie => {
-        return <RecipieListings key={recipie.id} recipie={recipie} />
-    })
+    const match = useRouteMatch()
 
     return (
         <div style={{ marginTop: "25px" }}>
-            {recipiesList}
+            <Route exact path="/recipies">
+                <RecipieListings recipies={recipies} />
+            </Route>
+            <Route path={`${match.url}/:recipieId`}>
+                <RecipieDetails recipies={recipies} />
+            </Route>
         </div>
     )
 }

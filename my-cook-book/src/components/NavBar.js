@@ -21,7 +21,6 @@ function NavBar() {
             <NavLink
                 id="recipies"
                 to="/recipies"
-                exact
                 activeStyle={activeStyles}
             >
                 Recipies

@@ -10,9 +10,7 @@ import RecipieForm from "./RecipieForm";
   // break the form up into components
     // maybe useContext on the form, depends on how component breakup goes
   // get RecipieDetails component written and set up
-    // making onClick work in recipieListings
-    // figure out the route and path change
-    // and maybe the recipies... probably not, it depends on how RecipieDetails goes.
+    // figure out why you can't go directly to the url and why you can't refresh
   // make the document title dynamic with a custom hook
   // when you click add recipie, redirect to new RecipieDetails
   // set styles
@@ -53,7 +51,7 @@ function App() {
         <Route path="/add-a-recipie">
           <RecipieForm onSetRecipies={handleSetRecipies} />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <HomePage />
         </Route>
       </Switch>
