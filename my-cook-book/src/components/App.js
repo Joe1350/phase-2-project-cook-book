@@ -7,7 +7,6 @@ import RecipiesList from "./RecipiesList";
 import RecipieForm from "./RecipieForm";
 
 // things to do
-// get add input field buttons working
 // get post request written and submit button working
 // get RecipieDetails component written and set up
   // making onClick work in recipieListings

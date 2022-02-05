@@ -6,8 +6,10 @@ function RecipieForm() {
         name: "",
         author: "",
         image: "",
+        description: "",
         servings: "",
         calories: "",
+        // category (needs to be a dropdown)
         prepTime: "",
         cookTime: "",
     })
@@ -43,10 +45,40 @@ function RecipieForm() {
         setDirectionInputList([...directionsInputList, e.target.value])
     }
 
+    function handleSubmitForm(e) {
+        e.preventDefault()
+        let prepTimeInput = formData.prepTime
+        const newRecipie = {
+            source: formData.source,
+            author: formData.author,
+            image: formData.image,
+            name: formData.name,
+            description: formData.description,
+            servings: formData.servings,
+            calories: formData.calories,
+            // category
+            prepTime: prepTimeInput,
+            cookTime: formData.cookTime,
+            totalTime: prepTimeInput + formData.cookTime,
+            ingredients: ingredientInputList,
+            directions: directionsInputList
+        }
+        fetch("http://localhost:3001/recipies", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newRecipie)
+        })
+        .then(r => r.json())
+        .then(data => console.log(data))
+        // setRecipies(newRecipie) ?
+    }
+
     return (
         <div>
             <h2>Add a New Recipie</h2>
-            <form>
+            <form onSubmit={handleSubmitForm}>
                 <label htmlFor="source">Source: </label>
                 <input
                     type="text"
@@ -79,6 +111,18 @@ function RecipieForm() {
                     required
                 />
                 <br></br>
+                <label htmlFor="description">Description: </label>
+                <input
+                    type="text"
+                    name="description"
+                    id="description"
+                    placeholder="Short description"
+                    value={formData.description}
+                    onChange={handleFormChange}
+                    required
+                />
+                <br></br>
+                {/* category dropdown */}
                 <label htmlFor="image">Image: </label>
                 <input
                     type="url"
