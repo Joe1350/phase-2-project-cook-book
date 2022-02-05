@@ -16,6 +16,7 @@ import RecipieForm from "./RecipieForm";
 // write home page
 // enter a couple more recipies
 // set styles
+// I'd like to turn the navbar into a square with three lines that opens the navbar
 
 function App() {
   const [recipies, setRecipies] = useState([])

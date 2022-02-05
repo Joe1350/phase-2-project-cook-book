@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function RecipieForm() {
     const [formData, setFormData] = useState({
@@ -10,9 +10,21 @@ function RecipieForm() {
         calories: "",
         prepTime: "",
         cookTime: "",
-        ingredients: [],
-        directrions: []
+        // ingredients: {},
+        // directrions: []
     })
+    const [ingredientInputList, setIngredientInputList] = useState([{ ingredient: "" }])
+
+    console.log(ingredientInputList)
+    console.log(formData.ingredients)
+
+    // useEffect(() => {
+    //     setFormData({
+    //         ...formData,
+    //         [formData.ingredients]: ingredientInputList
+    //     })
+    //     console.log(formData.ingredients)
+    // }, [ingredientInputList])
 
     function handleFormChange(e) {
         setFormData({
@@ -21,11 +33,16 @@ function RecipieForm() {
         })
     }
 
-    function handleAddIngredientInput() {
-        // this does not work
-        return (
-            <input type="text" name="ingredient" placeholder="ingredient" />
-        )
+    function handleIngredientInputChange(e, index) {
+        const { name, value } = e.target
+        const list = [...ingredientInputList]
+        list[index][name] = value
+        setIngredientInputList(list)
+    }
+
+    function handleAddIngredientInputClick(e) {
+        e.preventDefault()
+        setIngredientInputList([...ingredientInputList, { ingredient: "" }])
     }
 
     function handleAddDirectionInput() {
@@ -129,11 +146,22 @@ function RecipieForm() {
                 <div id="ingredients">
                     <h3>Ingredients</h3>
                     <p>
-                        Enter all ingredient details on 1 line per ingredient
+                        Use 1 line per ingredient and measurement
                         <br></br>
                         Example: 1 tablespoon garlic (minced)
                     </p>
-                    <button onClick={handleAddIngredientInput}>Add New Ingredient</button>
+                    {ingredientInputList.map((value, i) => {
+                        return (
+                            <div key={value}>
+                                <input
+                                    name="ingredient"
+                                    value={value.ingredient}
+                                    onChange={e => handleIngredientInputChange(e, i)}
+                                />
+                                {ingredientInputList.length - 1 === i ? <button onClick={handleAddIngredientInputClick}>Add New Ingredient</button> : null}
+                            </div>
+                        )
+                    })}
                 </div>
                 <div id="directions">
                     <h3>Directions</h3>
