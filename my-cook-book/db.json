@@ -29,13 +29,13 @@
                 {"ingedient": "½ teaspoon pepper"}
         ],
             "directions": [
-                "Place a deep saucepan or soup pot over medium high heat. Add the oil and butter.",
-                "When the butter has melted, add the onion and celery. Cook, stirring frequently until the onion has wilted. Take care not to brown the onion.",
-                "Add the garlic and cook for one more minute.",
-                "Add the tomatoes and cilantro. Cook for an additional 2-3 minutes while stirring and breaking up the tomatoes with a spoon.",
-                "Add the rice, taco seasoning, and cilantro. Stir well. Add the chicken broth, chicken, salt, and pepper.",
-                "Bring the mixture to a boil, then reduce the heat to low. Cover and cook for 18-20 minutes or until the rice is done.",
-                "Serve topped with additional cilantro"
+                {"direction": "Place a deep saucepan or soup pot over medium high heat. Add the oil and butter."},
+                {"direction": "When the butter has melted, add the onion and celery. Cook, stirring frequently until the onion has wilted. Take care not to brown the onion."},
+                {"direction": "Add the garlic and cook for one more minute."},
+                {"direction": "Add the tomatoes and cilantro. Cook for an additional 2-3 minutes while stirring and breaking up the tomatoes with a spoon."},
+                {"direction": "Add the rice, taco seasoning, and cilantro. Stir well. Add the chicken broth, chicken, salt, and pepper."},
+                {"direction": "Bring the mixture to a boil, then reduce the heat to low. Cover and cook for 18-20 minutes or until the rice is done."},
+                {"direction": "Serve topped with additional cilantro"}
             ],
             "notes": []
         }
