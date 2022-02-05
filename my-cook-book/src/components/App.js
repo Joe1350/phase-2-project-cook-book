@@ -7,15 +7,17 @@ import RecipiesList from "./RecipiesList";
 import RecipieForm from "./RecipieForm";
 
 // things to do
-// get post request written and submit button working
+// maybe useContext on the form and/or recipies
+// get post request and submit button working
 // get RecipieDetails component written and set up
   // making onClick work in recipieListings
-  // figure out the route and page change
-// make the document title dynamic
+  // figure out the route and path change
+// make the document title dynamic with a custom hook
 // write home page
 // enter a couple more recipies
 // set styles
 // I'd like to turn the navbar into a square with three lines that opens the navbar
+// maybe add a (pseudo)login feature
 
 function App() {
   const [recipies, setRecipies] = useState([])

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+// this most certainly needs to be broken up in to components
+
 function RecipieForm() {
     const [formData, setFormData] = useState({
         source: "",
@@ -73,39 +75,19 @@ function RecipieForm() {
         .then(r => r.json())
         .then(data => console.log(data))
         // setRecipies(newRecipie) ?
+        // I also want to be redirected to the recipieDetails page on submit
     }
 
     return (
         <div>
             <h2>Add a New Recipie</h2>
             <form onSubmit={handleSubmitForm}>
-                <label htmlFor="source">Source: </label>
-                <input
-                    type="text"
-                    name="source"
-                    id="source"
-                    placeholder="Where is this recipie from"
-                    value={formData.source}
-                    onChange={handleFormChange}
-                />
-                <br></br>
                 <label htmlFor="name">Name: </label>
                 <input
                     type="text"
                     name="name"
                     id="name"
                     placeholder="Recipie name"
-                    value={formData.author}
-                    onChange={handleFormChange}
-                    required
-                />
-                <br></br>
-                <label htmlFor="author">Author: </label>
-                <input
-                    type="text"
-                    name="author"
-                    id="author"
-                    placeholder="Who created this recipie"
                     value={formData.author}
                     onChange={handleFormChange}
                     required
@@ -123,6 +105,30 @@ function RecipieForm() {
                 />
                 <br></br>
                 {/* category dropdown */}
+                {/* <br></br> */}
+                <br></br>
+                <label htmlFor="source">Source: </label>
+                <input
+                    type="text"
+                    name="source"
+                    id="source"
+                    placeholder="Where is this recipie from"
+                    value={formData.source}
+                    onChange={handleFormChange}
+                />
+                <br></br>
+                <label htmlFor="author">Author: </label>
+                <input
+                    type="text"
+                    name="author"
+                    id="author"
+                    placeholder="Who created this recipie"
+                    value={formData.author}
+                    onChange={handleFormChange}
+                    required
+                />
+                <br></br>
+                
                 <label htmlFor="image">Image: </label>
                 <input
                     type="url"
