@@ -8,6 +8,7 @@ import RecipieForm from "./RecipieForm";
 
 // things to do
 // maybe useContext on the form
+// break the form up into components
 // get RecipieDetails component written and set up
   // making onClick work in recipieListings
   // figure out the route and path change
@@ -17,6 +18,8 @@ import RecipieForm from "./RecipieForm";
 // set styles
 // I'd like to turn the navbar into a square with three lines that opens the navbar
 // maybe add a (pseudo)login feature
+// add a category feature to the recipie list to filter by category, maybe a sort as well
+// gonna need a patch request for notes
 
 function App() {
   const [recipies, setRecipies] = useState([])

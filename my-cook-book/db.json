@@ -1,79 +1,79 @@
 {
-  "recipies": [
-    {
-      "id": "1",
-      "source": "https://www.lanascooking.com/spanish-rice-chicken-soup/",
-      "author": "Lana Stuart",
-      "image": "https://www.lanascooking.com/wp-content/uploads/2014/01/spanish-rice-and-chicken-soup-feature.jpg",
-      "name": "Spanish Rice and Chicken Soup",
-      "description": "Spanish Rice and Chicken Soup – a lovely version of chicken soup flavored with garlic, cilantro, tomatoes, and taco seasoning.",
-      "servings": 4,
-      "calories": 370,
-      "category": "soups and stews",
-      "prepTime": 10,
-      "cookTime": 30,
-      "totalTime": 40,
-      "ingredients": [
-        "1 tablespoon butter",
-        "1 tablespoon olive oil",
-        "1 medium onion chopped",
-        "2 ribs celery chopped",
-        "2 medium garlic cloves minced",
-        "½ cup chopped fresh cilantro",
-        "14.5 ounces canned whole peeled tomatoes with their juice",
-        "1 cup rice",
-        "2 tablespoons taco seasoning",
-        "8 cups chicken broth",
-        "2 cups cooked diced chicken",
-        "1 teaspoon salt",
-        "½ teaspoon pepper"
-      ],
-      "directions": [
-        "Place a deep saucepan or soup pot over medium high heat. Add the oil and butter.",
-        "When the butter has melted, add the onion and celery. Cook, stirring frequently until the onion has wilted. Take care not to brown the onion.",
-        "Add the garlic and cook for one more minute.",
-        "Add the tomatoes and cilantro. Cook for an additional 2-3 minutes while stirring and breaking up the tomatoes with a spoon.",
-        "Add the rice, taco seasoning, and cilantro. Stir well. Add the chicken broth, chicken, salt, and pepper.",
-        "Bring the mixture to a boil, then reduce the heat to low. Cover and cook for 18-20 minutes or until the rice is done.",
-        "Serve topped with additional cilantro"
-      ],
-      "notes": []
-    },
-    {
-      "source": "https://www.lanascooking.com/breakfast-casserole/",
-      "author": "Lana Stuart",
-      "image": "https://www.lanascooking.com/wp-content/uploads/2009/04/overnight-sausage-egg-breakfast-casserole-feature-1200x1200-1.jpg",
-      "name": "Overnight Sausage and Egg Breakfast Casserole",
-      "description": "This easy Overnight Sausage and Egg Breakfast Casserole has all your favorite breakfast foods in one great dish. The perfect thing to serve your overnight guests.",
-      "servings": 8,
-      "calories": 443,
-      "category": "breakfast",
-      "prepTime": 20,
-      "cookTime": 65,
-      "totalTime": 85,
-      "ingredients": [
-        "½ green or red bell pepper diced",
-        "½ medium onion diced",
-        "1 pound bulk sausage your choice of mild to hot",
-        "6 slices white bread cubed",
-        "8 eggs beaten",
-        "2 cups milk",
-        "1 teaspoon dry mustard powder",
-        "½ teaspoon salt",
-        "½ teaspoon ground black pepper",
-        "8 ounces sharp cheddar cheese grated"
-      ],
-      "directions": [
-        "Cook the bell pepper, onion, and sausage in a large skillet over medium-high heat until cooked through (no pink remains). Drain on paper towels.",
-        "Cut bread into about ½ inch cubes.",
-        "Beat together the eggs, milk, mustard, salt, and pepper.",
-        "In a lightly greased 13×9 baking pan or casserole dish, layer the bread cubes, sausage and cheese in that order.",
-        "Pour the milk and egg mixture all over making sure to get some onto all the bread cubes.",
-        "Cover with foil and refrigerate overnight.",
-        "The next morning, preheat the oven to 350F. Uncover casserole and bake for 45 minutes."
-      ],
-      "notes": [],
-      "id": "ikWu8JV"
-    }
-  ]
+    "recipies": [
+        {
+            "id": "1",
+            "name": "Spanish Rice and Chicken Soup",
+            "description": "Spanish Rice and Chicken Soup – a lovely version of chicken soup flavored with garlic, cilantro, tomatoes, and taco seasoning.",
+            "category": "soups and stews",
+            "source": "https://www.lanascooking.com/spanish-rice-chicken-soup/",
+            "author": "Lana Stuart",
+            "image": "https://www.lanascooking.com/wp-content/uploads/2014/01/spanish-rice-and-chicken-soup-feature.jpg",
+            "servings": 4,
+            "calories": 370,
+            "prepTime": 10,
+            "cookTime": 30,
+            "totalTime": 40,
+            "ingredients": [
+                "1 tablespoon butter",
+                "1 tablespoon olive oil",
+                "1 medium onion chopped",
+                "2 ribs celery chopped",
+                "2 medium garlic cloves minced",
+                "½ cup chopped fresh cilantro",
+                "14.5 ounces canned whole peeled tomatoes with their juice",
+                "1 cup rice",
+                "2 tablespoons taco seasoning",
+                "8 cups chicken broth",
+                "2 cups cooked diced chicken",
+                "1 teaspoon salt",
+                "½ teaspoon pepper"
+            ],
+            "directions": [
+                "Place a deep saucepan or soup pot over medium high heat. Add the oil and butter.",
+                "When the butter has melted, add the onion and celery. Cook, stirring frequently until the onion has wilted. Take care not to brown the onion.",
+                "Add the garlic and cook for one more minute.",
+                "Add the tomatoes and cilantro. Cook for an additional 2-3 minutes while stirring and breaking up the tomatoes with a spoon.",
+                "Add the rice, taco seasoning, and cilantro. Stir well. Add the chicken broth, chicken, salt, and pepper.",
+                "Bring the mixture to a boil, then reduce the heat to low. Cover and cook for 18-20 minutes or until the rice is done.",
+                "Serve topped with additional cilantro"
+            ],
+            "notes": []
+        },
+        {
+            "name": "Overnight Sausage and Egg Breakfast Casserole",
+            "description": "This easy Overnight Sausage and Egg Breakfast Casserole has all your favorite breakfast foods in one great dish. The perfect thing to serve your overnight guests.",
+            "category": "breakfast",
+            "source": "https://www.lanascooking.com/breakfast-casserole/",
+            "author": "Lana Stuart",
+            "image": "https://www.lanascooking.com/wp-content/uploads/2009/04/overnight-sausage-egg-breakfast-casserole-feature-1200x1200-1.jpg",
+            "servings": 8,
+            "calories": 443,
+            "prepTime": 20,
+            "cookTime": 65,
+            "totalTime": 85,
+            "ingredients": [
+                "½ green or red bell pepper diced",
+                "½ medium onion diced",
+                "1 pound bulk sausage your choice of mild to hot",
+                "6 slices white bread cubed",
+                "8 eggs beaten",
+                "2 cups milk",
+                "1 teaspoon dry mustard powder",
+                "½ teaspoon salt",
+                "½ teaspoon ground black pepper",
+                "8 ounces sharp cheddar cheese grated"
+            ],
+            "directions": [
+                "Cook the bell pepper, onion, and sausage in a large skillet over medium-high heat until cooked through (no pink remains). Drain on paper towels.",
+                "Cut bread into about ½ inch cubes.",
+                "Beat together the eggs, milk, mustard, salt, and pepper.",
+                "In a lightly greased 13×9 baking pan or casserole dish, layer the bread cubes, sausage and cheese in that order.",
+                "Pour the milk and egg mixture all over making sure to get some onto all the bread cubes.",
+                "Cover with foil and refrigerate overnight.",
+                "The next morning, preheat the oven to 350F. Uncover casserole and bake for 45 minutes."
+            ],
+            "notes": [],
+            "id": "ikWu8JV"
+        }
+    ]
 }

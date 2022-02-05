@@ -11,7 +11,8 @@ function RecipieListings({ recipie }) {
                 display: "flex",
                 border: "solid black 1px",
                 width: "70%",
-                marginLeft: "10%"
+                marginLeft: "10%",
+                marginBottom: "10px",
             }}
             onClick={handleShowDetails}
         >
