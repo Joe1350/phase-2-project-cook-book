@@ -207,7 +207,7 @@ function RecipieForm({ onSetRecipies }) {
                                     <button
                                         onClick={handleAddIngredientInputFieldClick}
                                     >
-                                        Add
+                                        Add Line
                                     </button> :
                                     null
                                 }
@@ -231,7 +231,7 @@ function RecipieForm({ onSetRecipies }) {
                                     <button
                                         onClick={handleAddDirectionInputFieldClick}
                                     >
-                                        Add
+                                        Add Line
                                     </button> :
                                     null
                                 }
@@ -240,7 +240,7 @@ function RecipieForm({ onSetRecipies }) {
                     })}
                 </div>
                 <br></br>
-                <input type="submit" value="Add Recipie"/>
+                <input style={{ display: "block", marginLeft: "auto", marginRight: "auto", width: "100px" }} type="submit" value="Add Recipie"/>
             </form>
         </div>
     )

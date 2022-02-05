@@ -9,6 +9,8 @@ html {
 
 #form {
   width: 70%;
+  margin-top: 25px;
+  margin-bottom: 25px;
   margin-left: 10%;
   border: solid black 1px;
   background-color: rgba(255, 255, 255, 1);
@@ -19,7 +21,6 @@ html {
   change so details are normal,
   but ingredients are long, 
   and directions are long and tall
-  and submit is normal and on the right
 */
 input{
   width: 80%;

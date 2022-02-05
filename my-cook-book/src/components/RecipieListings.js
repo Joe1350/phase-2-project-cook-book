@@ -19,7 +19,7 @@ function RecipieListings({ recipie }) {
         >
             <img 
                 style={{
-                    width: "120px",
+                    width: "25%",
                     height: "100%",
                     margin: "auto",
                     marginLeft: "10px",
