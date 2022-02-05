@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 // this most certainly needs to be broken up in to components
 
@@ -17,6 +18,7 @@ function RecipieForm({ onSetRecipies }) {
     })
     const [ingredientInputList, setIngredientInputList] = useState([""])
     const [directionsInputList, setDirectionInputList] = useState([""])
+    const history = useHistory()
 
     function handleFormChange(e) {
         setFormData({
@@ -75,8 +77,7 @@ function RecipieForm({ onSetRecipies }) {
         })
         .then(r => r.json())
         .then(newRecipie => onSetRecipies(newRecipie))
-        // setRecipies(newRecipie) ?
-        // I also want to be redirected to the recipieDetails page on submit
+        history.push("/recipies")
     }
 
     return (

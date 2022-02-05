@@ -66,6 +66,17 @@ function RecipieDetails({ recipies }) {
                     {directionsList}
                 </ol>
             </div>
+            {/* will add back in if I can <div
+                style={{
+                    backgroundColor: "white",
+                    marginTop: "25px",
+                    border: "solid black 1px",
+                    padding: "10px",
+                }}
+            >
+                <h3>Notes</h3>
+                <p>{recipie.notes}</p>
+            </div> */}
         </div>
     )
 }
