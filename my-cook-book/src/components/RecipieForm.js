@@ -12,6 +12,7 @@ function RecipieForm() {
         cookTime: "",
     })
     const [ingredientInputList, setIngredientInputList] = useState([{ ingredient: "" }])
+    const [directionsInputList, setDirectionInputList] = useState([{ direction: "" }])
 
     function handleFormChange(e) {
         setFormData({
@@ -32,9 +33,16 @@ function RecipieForm() {
         setIngredientInputList([...ingredientInputList, { ingredient: "" }])
     }
 
-    function handleAddDirectionInput() {
-        // placeholder
-        return null
+    function handleDirectionInputChange(e, index) {
+        const { name, value } = e.target
+        const list = [...directionsInputList]
+        list[index][name] = value
+        setDirectionInputList(list)
+    }
+
+    function handleAddDirectionInputFieldClick(e) {
+        e.preventDefault()
+        setDirectionInputList([...directionsInputList, { direction: "" }])
     }
 
     return (
@@ -139,7 +147,7 @@ function RecipieForm() {
                     </p>
                     {ingredientInputList.map((value, i) => {
                         return (
-                            <div key={value, i}>
+                            <div key={`${i}-${value}`}>
                                 <input
                                     name="ingredient"
                                     value={value.ingredient}
@@ -150,7 +158,7 @@ function RecipieForm() {
                                     <button
                                         onClick={handleAddIngredientInputFieldClick}
                                     >
-                                        Add New Ingredient
+                                        Add
                                     </button> :
                                     null
                                 }
@@ -161,7 +169,26 @@ function RecipieForm() {
                 <div id="directions">
                     <h3>Directions</h3>
                     <p>Add one step per line</p>
-                    <button onClick={handleAddDirectionInput}>Add New Direction</button>
+                    {directionsInputList.map((value, i) => {
+                        return (
+                            <div key={`${i},${value}`}>
+                                <input
+                                    name="directions"
+                                    value={value.direction}
+                                    onChange={e => handleDirectionInputChange(e, i)}
+                                />
+                                {
+                                    directionsInputList.length - 1 === i ?
+                                    <button
+                                        onClick={handleAddDirectionInputFieldClick}
+                                    >
+                                        Add
+                                    </button> :
+                                    null
+                                }
+                            </div>
+                        )
+                    })}
                 </div>
                 <br></br>
                 <input type="submit" value="Add Recipie"/>
