@@ -9,7 +9,7 @@ function RecipieListings({ recipie }) {
         <article
             style={{
                 display: "flex",
-                backgroundColor: "rgba(255, 255, 255, 1)",
+                backgroundColor: "cornsilk",
                 border: "solid black 1px",
                 width: "70%",
                 marginLeft: "10%",
@@ -23,7 +23,9 @@ function RecipieListings({ recipie }) {
                     height: "100%",
                     margin: "auto",
                     marginLeft: "10px",
-                    marginRight: "10px"
+                    marginRight: "10px",
+                    marginTop: "10px",
+                    marginBottom: "10px"
                 }}
                 src={recipie.image}
             />

@@ -4,7 +4,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 html {
-  background-color: cornsilk;
+  background-color: #FAE39E;
 }
 
 #form {
@@ -13,7 +13,7 @@ html {
   margin-bottom: 25px;
   margin-left: 10%;
   border: solid black 1px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: cornsilk;
   padding: 10px;
 }
 

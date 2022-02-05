@@ -9,7 +9,7 @@ function NavBar() {
         margin: "0 6px 6px",
         background: "firebrick",
         textDecoration: "none",
-        color: "white",
+        color: "cornsilk",
         textAlign: "center",
     };
 
@@ -21,6 +21,8 @@ function NavBar() {
                 style={linkStyles}
                 activeStyle={{
                     background: 'gray',
+                    color: 'black',
+                    boxShadow: "3px 3px 10px black"
                 }}
             >
                 Home
@@ -31,6 +33,8 @@ function NavBar() {
                 style={linkStyles}
                 activeStyle={{
                     background: 'gray',
+                    color: 'black',
+                    boxShadow: "3px 3px 10px black"
                 }}
             >
                 Recipies
@@ -40,7 +44,9 @@ function NavBar() {
                 exact
                 style={linkStyles}
                 activeStyle={{
-                    background: 'gray',
+                    background: '#7D7D78',
+                    color: '#000',
+                    boxShadow: "3px 3px 10px black"
                 }}
             >
                 Add a Recipie
