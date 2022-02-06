@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import NavBar from "./NavBar";
 import HomePage from "./HomePage";
-import RecipiesList from "./RecipiesList";
+import RecipiesPage from "./RecipiesPage";
 import RecipieForm from "./RecipieForm";
 
 // things I need help with
@@ -43,7 +43,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route path="/recipies">
-          <RecipiesList recipies={recipies} />
+          <RecipiesPage recipies={recipies} />
         </Route>
         <Route path="/add-a-recipie">
           <RecipieForm setRecipies={setRecipies} />
