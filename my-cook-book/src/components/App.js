@@ -9,7 +9,8 @@ import RecipieForm from "./RecipieForm";
 // things I need help with
   // figure out why I can't refresh RecipieDetails or go directly ther with the link
     // I suspect I need to pass 1 recipie to RedipieDetails
-  // (probably the same problem as ^^) add recipie redirect works, but it won't load
+      // but we don't know which recipie to pass until it gets there.
+  // (probably the same problem as ^^^) add recipie redirect works, but it won't load
 
 // things to do
   // add category dropdown
