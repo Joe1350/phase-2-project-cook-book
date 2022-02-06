@@ -6,29 +6,26 @@ import HomePage from "./HomePage";
 import RecipiesList from "./RecipiesList";
 import RecipieForm from "./RecipieForm";
 
-// things to do
-  // break the form up into components
-    // maybe useContext on the form, depends on how component breakup goes
+// things I need help with
   // figure out why I can't refresh RecipieDetails
-  // make document title change
-    // make the document title dynamic with a custom hook
-    // figure out why when you click on a recipie, and then change back to the list the title doesn't change
-  // add recipie redirect works, but it won't load
+  // (probably the same problem as ^^) add recipie redirect works, but it won't load
+
+// things to do
   // set styles
     // fix links
     // fix inputs
 
-// might not happen right now
-  // add a category feature to the recipie list to filter by category, maybe a sort as well
-  // gonna need a patch request and input field for notes
-
-// probably not going to happen right now
-
-// not gonna happen right now
+// future goals
   // duplicate recipies
   // edit recipies
+  // delete recipies
   // maybe add a (pseudo)login feature
-  // I'd like to turn the navbar into a square with three lines that opens the navbar
+  // I'd like to turn the navbar into a square with three lines that opens the navbar and animates to an x
+  // break the form up into components
+    // maybe useContext on the form, depends on how component breakup goes
+  // gonna need a patch request and input field for notes
+  // add a category feature to the recipie list to filter by category, maybe a sort as well
+  // make custom useDocumentTitle hook work on RecipieDetails
 
 function App() {
   const [recipies, setRecipies] = useState([])

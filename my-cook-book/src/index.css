@@ -34,13 +34,17 @@ article {
     display: flex;
     background-color: cornsilk;
     border: solid black 1px;
-    width: 70%;
-    margin-left: 10%;
     margin-bottom: 10px;
 }
 
 #recipie-list {
   margin-top: 25px;
+}
+
+#recipie-listing {
+  display: block;
+  width: 70%;
+  margin-left: 10%;
 }
 
 #recipie-listing-image {

@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function RecipieDetails({ recipies }) {
-    const [recipie, setRecipie] = useState(recipies[0])
+    const [recipie, setRecipie] = useState(
+        {
+            ingredients: ["ingredient"],
+            directions: ["step"]
+        }
+    )
     const params = useParams();
 
     useEffect(() => {
