@@ -13,12 +13,6 @@ import RecipieForm from "./RecipieForm";
       // maybe useContext will solve this problem
   // (probably the same problem as ^^^^) add recipie redirect works, but it won't load
 
-// things to do
-  // break the form up into components
-    // maybe useContext on the form, depends on how component breakup goes
-  // add a category feature to the recipie list to filter by category, maybe a sort as well
-    // sort by name, time, calories, servings
-
 // future goals
   // duplicate recipies
   // edit recipies
@@ -27,6 +21,8 @@ import RecipieForm from "./RecipieForm";
   // I'd like to turn the navbar into a square with three lines that opens the navbar and animates to an x
   // add notes feature
     // gonna need a patch request and input field for notes
+  // add a category feature to the recipie list to filter by category, maybe a sort as well
+    // sort by name, time, calories, servings
 
 function App() {
   const [recipies, setRecipies] = useState([])
