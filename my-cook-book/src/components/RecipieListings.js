@@ -6,28 +6,9 @@ function RecipieListings({ recipies }) {
         return (
             <div key={recipie.id}>
                 <Link to={`/recipies/${recipie.id}`}>
-                    <article
-                        style={{
-                            display: "flex",
-                            backgroundColor: "cornsilk",
-                            border: "solid black 1px",
-                            width: "70%",
-                            marginLeft: "10%",
-                            marginBottom: "10px",
-                        }}
-                    >
-                        <img 
-                            style={{
-                                width: "25%",
-                                height: "100%",
-                                display: "block",
-                                marginTop: "auto",
-                                marginBottom: "auto",
-                                padding: "10px"
-                            }}
-                            src={recipie.image}
-                        />
-                        <div style={{ marginRight: "10px" }}>
+                    <article>
+                        <img id="recipie-listing-image" src={recipie.image} />
+                        <div>
                             <h2>{recipie.name}</h2>
                             <small>{recipie.author}</small>
                             <br></br>

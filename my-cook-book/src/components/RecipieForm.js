@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 // this most certainly needs to be broken up in to components
 
@@ -19,6 +20,8 @@ function RecipieForm({ onSetRecipies }) {
     const [ingredientInputList, setIngredientInputList] = useState([""])
     const [directionsInputList, setDirectionInputList] = useState([""])
     const history = useHistory()
+
+    useDocumentTitle("My Cook Book | Add a Recipie")
 
     function handleFormChange(e) {
         setFormData({
@@ -241,7 +244,7 @@ function RecipieForm({ onSetRecipies }) {
                     })}
                 </div>
                 <br></br>
-                <input style={{ display: "block", marginLeft: "auto", marginRight: "auto", width: "100px" }} type="submit" value="Add Recipie"/>
+                <input id="submit" type="submit" value="Add Recipie"/>
             </form>
         </div>
     )

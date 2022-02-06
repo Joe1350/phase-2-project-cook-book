@@ -19,6 +19,73 @@ a:link, a:visited, a:hover, a:active {
   box-shadow: 1px 1px 5px black
 }
 
+#home-page {
+  width: 80%;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: 25px;
+}
+
+#home-page-image {
+  width: 50%;
+}
+
+article {
+    display: flex;
+    background-color: cornsilk;
+    border: solid black 1px;
+    width: 70%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+#recipie-list {
+  margin-top: 25px;
+}
+
+#recipie-listing-image {
+    width: 150px;
+    height: 100%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10px;
+}
+
+#recipie-details {
+    width: 70%;
+    background-color: cornsilk;
+    margin-left: 10%;
+    border: solid black 1px;
+    padding: 25px;
+}
+
+#recipie-details-image {
+  width: 33%;
+}
+
+#recipie-details-description-block {
+    background-color: white;
+    width: 70%;
+    margin-left: 10%;
+    margin-top: 10px;
+    border: solid black 1px;
+    padding: 10px;
+    text-align: center;
+}
+
+#recipie-details-description {
+  width: 90%;
+  margin-left: 5%;
+}
+
+#recipie-ingredients-and-directions {
+    background-color: white;
+    margin-top: 25px;
+    border: solid black 1px;
+    padding: 10px;
+}
+
 #form {
   width: 70%;
   margin-top: 25px;
@@ -27,6 +94,13 @@ a:link, a:visited, a:hover, a:active {
   border: solid black 1px;
   background-color: cornsilk;
   padding: 10px;
+}
+
+#submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
 }
 
 /*

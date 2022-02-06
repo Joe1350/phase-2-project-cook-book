@@ -10,11 +10,12 @@ import RecipieForm from "./RecipieForm";
   // break the form up into components
     // maybe useContext on the form, depends on how component breakup goes
   // figure out why I can't refresh RecipieDetails
-  // make the document title dynamic with a custom hook
+  // make document title change
+    // make the document title dynamic with a custom hook
+    // figure out why when you click on a recipie, and then change back to the list the title doesn't change
   // add recipie redirect works, but it won't load
   // set styles
     // fix links
-    // pull inline styles out to css
     // fix inputs
 
 // might not happen right now
@@ -22,12 +23,12 @@ import RecipieForm from "./RecipieForm";
   // gonna need a patch request and input field for notes
 
 // probably not going to happen right now
-  // I'd like to turn the navbar into a square with three lines that opens the navbar
-  // maybe add a (pseudo)login feature
 
 // not gonna happen right now
   // duplicate recipies
   // edit recipies
+  // maybe add a (pseudo)login feature
+  // I'd like to turn the navbar into a square with three lines that opens the navbar
 
 function App() {
   const [recipies, setRecipies] = useState([])
