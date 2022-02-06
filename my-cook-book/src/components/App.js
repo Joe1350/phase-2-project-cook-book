@@ -13,6 +13,9 @@ import RecipieForm from "./RecipieForm";
       // maybe useContext will solve this problem
   // (probably the same problem as ^^^^) add recipie redirect works, but it won't load
 
+// things to do
+  // fix remove button
+
 // future goals
   // duplicate recipies
   // edit recipies
