@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import { v4 as uuid } from "uuid";
 
-function RecipieForm({ onSetRecipies }) {
+function RecipieForm({ setRecipies }) {
     const [formData, setFormData] = useState({
         source: "",
         name: "",
@@ -12,7 +12,7 @@ function RecipieForm({ onSetRecipies }) {
         description: "",
         servings: "",
         calories: "",
-        // category (needs to be a dropdown)
+        category: "",
         prepTime: "",
         cookTime: "",
     })
@@ -63,7 +63,7 @@ function RecipieForm({ onSetRecipies }) {
             description: formData.description,
             servings: parseInt(formData.servings),
             calories: parseInt(formData.calories),
-            category: "", // formData.category,
+            category: formData.category,
             prepTime: parseInt(prepTimeInput),
             cookTime: parseInt(formData.cookTime),
             totalTime: (parseInt(prepTimeInput) + parseInt(formData.cookTime)),
@@ -79,9 +79,11 @@ function RecipieForm({ onSetRecipies }) {
             body: JSON.stringify(newRecipie)
         })
         .then(r => r.json())
-        .then(newRecipie => onSetRecipies(newRecipie))
+        .then(newRecipie => setRecipies(newRecipie))
         history.push(`/recipies/${newRecipie.id}`)
     }
+
+    console.log(formData.category)
 
     return (
         <div id="form">
@@ -109,8 +111,23 @@ function RecipieForm({ onSetRecipies }) {
                     required
                 />
                 <br></br>
-                {/* category dropdown */}
-                {/* <br></br> */}
+                <label htmlFor="category">Category: </label>
+                <select
+                    name="category"
+                    value={formData.category}
+                    onChange={handleFormChange}
+                >
+                    <option>Choose a category</option>
+                    <option value="appetizers">Appetizers</option>
+                    <option value="beverages">Beverages</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="desserts">Desserts</option>
+                    <option value="main dishes">Main Dishes</option>
+                    <option value="salads">Salads</option>
+                    <option value="side dishes">Side Dishes</option>
+                    <option value="soups and stews">Soups and Stews</option>
+                </select>
+                <br></br>
                 <br></br>
                 <label htmlFor="source">Source: </label>
                 <input
@@ -161,7 +178,7 @@ function RecipieForm({ onSetRecipies }) {
                     type="text"
                     name="calories"
                     id="calories"
-                    placeholder="calories per serving"
+                    placeholder="Calories per serving"
                     value={formData.calories}
                     onChange={handleFormChange}
                     required

@@ -7,13 +7,13 @@ import RecipiesList from "./RecipiesList";
 import RecipieForm from "./RecipieForm";
 
 // things I need help with
-  // figure out why I can't refresh RecipieDetails or go directly ther with the link
+  // figure out why I can't refresh RecipieDetails or go directly there with the link
     // I suspect I need to pass 1 recipie to RedipieDetails
       // but we don't know which recipie to pass until it gets there.
   // (probably the same problem as ^^^) add recipie redirect works, but it won't load
 
 // things to do
-  // add category dropdown
+  // add remove button to ingredients and directions input
 
 // future goals
   // duplicate recipies
@@ -25,6 +25,7 @@ import RecipieForm from "./RecipieForm";
     // maybe useContext on the form, depends on how component breakup goes
   // gonna need a patch request and input field for notes
   // add a category feature to the recipie list to filter by category, maybe a sort as well
+    // sort by name, time, calories, servings
   // make custom useDocumentTitle hook work on RecipieDetails
 
 function App() {
@@ -36,10 +37,6 @@ function App() {
     .then(setRecipies)
   }, [])
 
-  function handleSetRecipies(newRecipie) {
-    setRecipies(...recipies, newRecipie)
-  }
-
   return (
     <div>
       <Header />
@@ -49,7 +46,7 @@ function App() {
           <RecipiesList recipies={recipies} />
         </Route>
         <Route path="/add-a-recipie">
-          <RecipieForm onSetRecipies={handleSetRecipies} />
+          <RecipieForm setRecipies={setRecipies} />
         </Route>
         <Route exact path="/">
           <HomePage />
