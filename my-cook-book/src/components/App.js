@@ -10,7 +10,7 @@ import RecipieForm from "./RecipieForm";
   // figure out why I can't refresh RecipieDetails or go directly there with the link
     // I suspect I need to pass 1 recipie to RedipieDetails
       // but we don't know which recipie to pass until it gets there.
-      //maybe useContext will solve this problem
+      // maybe useContext will solve this problem
   // (probably the same problem as ^^^^) add recipie redirect works, but it won't load
 
 // things to do
