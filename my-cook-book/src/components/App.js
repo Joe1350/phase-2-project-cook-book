@@ -7,13 +7,12 @@ import RecipiesList from "./RecipiesList";
 import RecipieForm from "./RecipieForm";
 
 // things I need help with
-  // figure out why I can't refresh RecipieDetails
+  // figure out why I can't refresh RecipieDetails or go directly ther with the link
+    // I suspect I need to pass 1 recipie to RedipieDetails
   // (probably the same problem as ^^) add recipie redirect works, but it won't load
 
 // things to do
-  // set styles
-    // fix links
-    // fix inputs
+  // add category dropdown
 
 // future goals
   // duplicate recipies

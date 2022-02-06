@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import useDocumentTitle from "../hooks/useDocumentTitle";
-
-// this most certainly needs to be broken up in to components
+import { v4 as uuid } from "uuid";
 
 function RecipieForm({ onSetRecipies }) {
     const [formData, setFormData] = useState({
@@ -56,6 +55,7 @@ function RecipieForm({ onSetRecipies }) {
         e.preventDefault()
         let prepTimeInput = formData.prepTime
         const newRecipie = {
+            id: uuid(),
             source: formData.source,
             author: formData.author,
             image: formData.image,
@@ -80,7 +80,7 @@ function RecipieForm({ onSetRecipies }) {
         })
         .then(r => r.json())
         .then(newRecipie => onSetRecipies(newRecipie))
-        history.push("/recipies")
+        history.push(`/recipies/${newRecipie.id}`)
     }
 
     return (
@@ -225,11 +225,12 @@ function RecipieForm({ onSetRecipies }) {
                     {directionsInputList.map((value, i) => {
                         return (
                             <div key={`${i}direction`}>
-                                <input
+                                <textarea
                                     name="directions"
                                     value={value}
                                     onChange={e => handleDirectionInputChange(e, i)}
-                                />
+                                >
+                                </textarea>
                                 {
                                     directionsInputList.length - 1 === i ?
                                     <button

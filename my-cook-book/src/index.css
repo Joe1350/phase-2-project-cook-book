@@ -7,6 +7,10 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
+h2 {
+  color: firebrick;
+}
+
 #home, #recipies, #add-a-recipie {
   display: inline-block;
   width: 100px;
@@ -54,6 +58,14 @@ article {
     margin-top: auto;
     margin-bottom: auto;
     padding: 10px;
+}
+
+#recipie-listing-details {
+  margin-right: 10px;
+}
+
+#black-text {
+  color: black;
 }
 
 #recipie-details {
@@ -112,6 +124,6 @@ article {
   but ingredients are long, 
   and directions are long and tall
 */
-input{
+/* input{
   width: 80%;
-}
+} */
