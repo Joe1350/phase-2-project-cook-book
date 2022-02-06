@@ -12,9 +12,6 @@ import RecipieForm from "./RecipieForm";
       // but we don't know which recipie to pass until it gets there.
   // (probably the same problem as ^^^) add recipie redirect works, but it won't load
 
-// things to do
-  // add remove button to ingredients and directions input
-
 // future goals
   // duplicate recipies
   // edit recipies

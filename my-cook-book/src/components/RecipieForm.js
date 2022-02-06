@@ -40,6 +40,12 @@ function RecipieForm({ setRecipies }) {
         setIngredientInputList([...ingredientInputList, e.target.value])
     }
 
+    function handleDeleteIngredientInputFieldClick(index) {
+        const list = [...ingredientInputList]
+        list.splice(index, 1)
+        setIngredientInputList(list)
+    }
+
     function handleDirectionInputChange(e, index) {
         const directionsList = [...directionsInputList]
         directionsList[index] = e.target.value
@@ -49,6 +55,12 @@ function RecipieForm({ setRecipies }) {
     function handleAddDirectionInputFieldClick(e) {
         e.preventDefault()
         setDirectionInputList([...directionsInputList, e.target.value])
+    }
+
+    function handleDeleteDirectionInputFieldClick(index) {
+        const list = [...directionsInputList]
+        list.splice(index, 1)
+        setDirectionInputList(list)
     }
 
     function handleSubmitForm(e) {
@@ -82,8 +94,6 @@ function RecipieForm({ setRecipies }) {
         .then(newRecipie => setRecipies(newRecipie))
         history.push(`/recipies/${newRecipie.id}`)
     }
-
-    console.log(formData.category)
 
     return (
         <div id="form">
@@ -224,6 +234,15 @@ function RecipieForm({ setRecipies }) {
                                     onChange={e => handleIngredientInputChange(e, i)}
                                 />
                                 {
+                                    ingredientInputList.length !== 1 ?
+                                    <button
+                                        onClick={handleDeleteIngredientInputFieldClick}
+                                    >
+                                        Remove
+                                    </button> :
+                                    null
+                                }
+                                {
                                     ingredientInputList.length - 1 === i ?
                                     <button
                                         onClick={handleAddIngredientInputFieldClick}
@@ -248,6 +267,15 @@ function RecipieForm({ setRecipies }) {
                                     onChange={e => handleDirectionInputChange(e, i)}
                                 >
                                 </textarea>
+                                {
+                                    directionsInputList.length !== 1 ?
+                                    <button
+                                        onClick={handleDeleteDirectionInputFieldClick}
+                                    >
+                                        Remove
+                                    </button> :
+                                    null
+                                }
                                 {
                                     directionsInputList.length - 1 === i ?
                                     <button
