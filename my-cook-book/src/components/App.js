@@ -12,17 +12,20 @@ import RecipieForm from "./RecipieForm";
       // but we don't know which recipie to pass until it gets there.
   // (probably the same problem as ^^^) add recipie redirect works, but it won't load
 
+// things to do
+  // break the form up into components
+    // maybe useContext on the form, depends on how component breakup goes
+  // add a category feature to the recipie list to filter by category, maybe a sort as well
+    // sort by name, time, calories, servings
+
 // future goals
   // duplicate recipies
   // edit recipies
   // delete recipies
   // maybe add a (pseudo)login feature
   // I'd like to turn the navbar into a square with three lines that opens the navbar and animates to an x
-  // break the form up into components
-    // maybe useContext on the form, depends on how component breakup goes
-  // gonna need a patch request and input field for notes
-  // add a category feature to the recipie list to filter by category, maybe a sort as well
-    // sort by name, time, calories, servings
+  // add notes feature
+    // gonna need a patch request and input field for notes
   // make custom useDocumentTitle hook work on RecipieDetails
 
 function App() {

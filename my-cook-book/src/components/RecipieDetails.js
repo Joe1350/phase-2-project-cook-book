@@ -50,7 +50,7 @@ function RecipieDetails({ recipies }) {
                     {directionsList}
                 </ol>
             </div>
-            {/* will add back in if I can <div
+            {/* will add back in when I decide to add recipie notes feature <div
                 style={{
                     backgroundColor: "white",
                     marginTop: "25px",
