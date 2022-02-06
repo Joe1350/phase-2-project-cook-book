@@ -23,10 +23,10 @@ import RecipieForm from "./RecipieForm";
 
 // things I need help with
   // figure out why I can't refresh RecipieDetails or go directly there with the link
-    // I suspect I need to pass 1 recipie to RedipieDetails
+    // I suspect I need to pass 1 recipie to RecipieDetails
       // but we don't know which recipie to pass until it gets there.
       // maybe useContext will solve this problem
-  // Add recipie redirect works, but it won't load(probably the same problem as ^^^^)
+  // Add recipie redirect works, but it won't load(at least partially a state issue)
 
 // things I might need help with
   // fix remove button and add back in (commented out broken code on form components)
@@ -36,6 +36,7 @@ import RecipieForm from "./RecipieForm";
     // sort by name, time, calories, servings
 
 // future goals
+  // add a Footer component
   // duplicate recipies
   // edit recipies
     // maybe any edit makes a duplicate, and then you can delete previous versions later later
