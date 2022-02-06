@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 function RecipieDetails({ recipies }) {
     const [recipie, setRecipie] = useState(
@@ -16,9 +17,11 @@ function RecipieDetails({ recipies }) {
         ))
     }, [recipie])
 
-    useEffect(() => {
-        document.title = `My Cook Book | ${recipie.name}`
-    }, [recipie])
+    useDocumentTitle(`My Cook Book | ${recipie.name}`, recipie)
+
+    // useEffect(() => {
+    //     document.title = `My Cook Book | ${recipie.name}`
+    // }, [recipie])
 
     const ingredientsList = recipie.ingredients.map(ingredient => {
         return <li key={ingredient}>{ingredient}</li>

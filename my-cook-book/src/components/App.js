@@ -10,7 +10,8 @@ import RecipieForm from "./RecipieForm";
   // figure out why I can't refresh RecipieDetails or go directly there with the link
     // I suspect I need to pass 1 recipie to RedipieDetails
       // but we don't know which recipie to pass until it gets there.
-  // (probably the same problem as ^^^) add recipie redirect works, but it won't load
+      //maybe useContext will solve this problem
+  // (probably the same problem as ^^^^) add recipie redirect works, but it won't load
 
 // things to do
   // break the form up into components
@@ -26,7 +27,6 @@ import RecipieForm from "./RecipieForm";
   // I'd like to turn the navbar into a square with three lines that opens the navbar and animates to an x
   // add notes feature
     // gonna need a patch request and input field for notes
-  // make custom useDocumentTitle hook work on RecipieDetails
 
 function App() {
   const [recipies, setRecipies] = useState([])

@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 function RecipieListings({ recipies }) {
+    useDocumentTitle('My Cook Book | Recipies')
+    
     const renderRecipies = recipies.map(recipie => {
         return (
             <div key={recipie.id}>
