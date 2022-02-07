@@ -13,11 +13,11 @@ My Cook Book is an app for saving and viewing my favorite recipies, or recipies 
 - in the second terminal, type npm start and press enter
 - you can now view my web application
 
-## support
+## Support
 
 - there is currently no support for this project
 
-## roadmap
+## Roadmap
 
 - add a Footer component
 - duplicate, edit, and delete recipies
@@ -38,7 +38,7 @@ My Cook Book is an app for saving and viewing my favorite recipies, or recipies 
 
 I am currently not open to contributers
 
-## Authors and acknowledgment
+## Authors and Acknowledgment
 
 All recipies and images in this project are from https://www.lanascooking.com/
 I would also like to thank Clue Mediator for their helpful blog on dynamically adding input fields in react
