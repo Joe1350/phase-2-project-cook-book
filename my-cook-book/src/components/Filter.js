@@ -1,10 +1,10 @@
 import React from "react";
 
-function Filter() {
+function Filter({ filterBy, onFilterByChange }) {
     return (
         <div id="category-filter">
             <label htmlFor="category">Filter By: </label>
-            <select name="category" value={null} onChange={null}>
+            <select name="category" value={filterBy} onChange={onFilterByChange}>
                 <option value="all">Choose a Category...</option>
                 <option value="appetizers">Appetizers</option>
                 <option value="beverages">Beverages</option>

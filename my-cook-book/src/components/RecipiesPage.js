@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 import Filter from "./Filter";
 import Sort from "./Sort";
@@ -7,19 +7,25 @@ import RecipieDetails from "./RecipieDetails";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 function RecipiesPage({ recipies }) {
+    const [filterBy, setFilterBy] = useState("all")
+
     const match = useRouteMatch()
 
     useDocumentTitle("My Cook Book | Recipies")
 
+    function handleFilterByChange(e) {
+        setFilterBy(e.target.value)
+    }
+
     return (
         <div id="recipie-list">
             <div id="filter-and-sort">
-                <Filter />
+                <Filter filterBy={filterBy} onFilterByChange={handleFilterByChange} />
                 <Sort />
             </div>
             <Switch>
                 <Route exact path="/recipies">
-                    <RecipiesList recipies={recipies} />
+                    <RecipiesList recipies={recipies} category={filterBy} />
                 </Route>
                 <Route path={`${match.url}/:recipieId`}>
                     <RecipieDetails recipies={recipies} />
