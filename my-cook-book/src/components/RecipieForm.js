@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import RecipieFormDetails from "./RecipieFormDetails";
 import RecipieFormIngredients from "./RecipieFormIngredients";
 import RecipieFormDirections from "./RecipieFormDirections";
@@ -21,7 +21,7 @@ function RecipieForm({ setRecipies }) {
     })
     const [ingredientInputList, setIngredientInputList] = useState([""])
     const [directionsInputList, setDirectionsInputList] = useState([""])
-    const history = useHistory()
+    // const history = useHistory()
 
     useDocumentTitle("My Cook Book | Add a Recipie")
 
@@ -61,7 +61,7 @@ function RecipieForm({ setRecipies }) {
         })
         .then(r => r.json())
         .then(newRecipie => setRecipies(newRecipie))
-        history.push(`/recipies/${newRecipie.id}`)
+        // history.push(`/recipies/${newRecipie.id}`)
     }
 
     return (

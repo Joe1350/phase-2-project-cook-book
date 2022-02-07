@@ -4,6 +4,7 @@ import useDocumentTitle from "../hooks/useDocumentTitle";
 
 function RecipieListings({ recipies, category }) {
     const [filteredRecipies, setFilteredRecipies] = useState([])
+    
     useDocumentTitle('My Cook Book | Recipies')
 
     function fetchRecipies() {

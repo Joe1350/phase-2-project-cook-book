@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 import Filter from "./Filter";
-import Sort from "./Sort";
+// import Sort from "./Sort";
 import RecipiesList from "./RecipiesList";
 import RecipieDetails from "./RecipieDetails";
 import useDocumentTitle from "../hooks/useDocumentTitle";
@@ -21,7 +21,7 @@ function RecipiesPage({ recipies }) {
         <div id="recipie-list">
             <div id="filter-and-sort">
                 <Filter filterBy={filterBy} onFilterByChange={handleFilterByChange} />
-                <Sort />
+                {/* <Sort /> */}
             </div>
             <Switch>
                 <Route exact path="/recipies">

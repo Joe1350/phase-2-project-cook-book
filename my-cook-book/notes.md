@@ -43,6 +43,6 @@
   // add RecipieNotes component
   // add an area to display notes in state, and a form to add new notes
     // gonna need a patch request and text area for notes on the RecipieDetails
-  // add a category feature to the RecipiePage to filter by category, maybe a sort as well
+  // add a sort feature
     // sort by name, time, calories, servings
   // useContext on recipies(maybe)
