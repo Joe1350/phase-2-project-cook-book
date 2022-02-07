@@ -12,11 +12,12 @@ function RecipieFormDirections({ directionsInputList, setDirectionsInputList }) 
         setDirectionsInputList([...directionsInputList, e.target.value])
     }
 
-    // function handleDeleteDirectionInputFieldClick(index) {
-    //     const list = [...directionsInputList]
-    //     list.splice(index, 1)
-    //     setDirectionsInputList(list)
-    // }
+    function handleDeleteDirectionInputFieldClick(e, index) {
+        e.preventDefault()
+        const list = [...directionsInputList]
+        list.splice(index, 1)
+        setDirectionsInputList(list)
+    }
 
     return (
         <div id="directions">
@@ -31,15 +32,15 @@ function RecipieFormDirections({ directionsInputList, setDirectionsInputList }) 
                             onChange={e => handleDirectionInputChange(e, i)}
                         >
                         </textarea>
-                        {/* {
+                        {
                             directionsInputList.length !== 1 ?
                             <button
-                                onClick={handleDeleteDirectionInputFieldClick}
+                                onClick={e => handleDeleteDirectionInputFieldClick(e, i)}
                             >
                                 Remove
                             </button> :
                             null
-                        } */}
+                        }
                         {
                             directionsInputList.length - 1 === i ?
                             <button

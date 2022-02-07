@@ -12,11 +12,12 @@ function RecipieFormIngredients({ ingredientInputList, setIngredientInputList })
         setIngredientInputList([...ingredientInputList, e.target.value])
     }
 
-    // function handleDeleteIngredientInputFieldClick(index) {
-    //     const list = [...ingredientInputList]
-    //     list.splice(index, 1)
-    //     setIngredientInputList(list)
-    // }
+    function handleDeleteIngredientInputFieldClick(e, index) {
+        e.preventDefault()
+        const list = [...ingredientInputList]
+        list.splice(index, 1)
+        setIngredientInputList(list)
+    }
 
     return (
         <div id="ingredients">
@@ -34,15 +35,15 @@ function RecipieFormIngredients({ ingredientInputList, setIngredientInputList })
                             value={value}
                             onChange={e => handleIngredientInputChange(e, i)}
                         />
-                        {/* {
+                        {
                             ingredientInputList.length !== 1 ?
                             <button
-                                onClick={handleDeleteIngredientInputFieldClick}
+                                onClick={e => handleDeleteIngredientInputFieldClick(e, i)}
                             >
                                 Remove
                             </button> :
                             null
-                        } */}
+                        }
                         {
                             ingredientInputList.length - 1 === i ?
                             <button

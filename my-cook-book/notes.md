@@ -5,9 +5,6 @@
       // maybe useContext will solve this problem
   // Add recipie redirect works, but it won't load(at least partially a state issue)
 
-// things I might need help with
-  // fix remove button and add back in (commented out broken code on form components)
-
 // future goals
   // add a Footer component
   // duplicate recipies
