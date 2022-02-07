@@ -19,10 +19,6 @@ function RecipieDetails({ recipies }) {
 
     useDocumentTitle(`My Cook Book | ${recipie.name}`, recipie)
 
-    // useEffect(() => {
-    //     document.title = `My Cook Book | ${recipie.name}`
-    // }, [recipie])
-
     const ingredientsList = recipie.ingredients.map(ingredient => {
         return <li key={ingredient}>{ingredient}</li>
     })
