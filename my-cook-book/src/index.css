@@ -34,6 +34,17 @@ h2 {
   width: 50%;
 }
 
+#filter-and-sort {
+  width: 70%;
+  margin-left: 10%;
+  padding-bottom: 10px;
+  display: flex;
+}
+
+#sort {
+  padding-left: 10px;
+}
+
 article {
     display: flex;
     background-color: cornsilk;
