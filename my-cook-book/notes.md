@@ -1,10 +1,3 @@
-// things I need help with
-  // figure out why I can't refresh RecipieDetails or go directly there with the link
-    // I suspect I need to pass 1 recipie to RecipieDetails
-      // but we don't know which recipie to pass until it gets there.
-      // maybe useContext will solve this problem
-  // Add recipie redirect works, but it won't load(at least partially a state issue)
-
 // future goals
   // add a Footer component
   // duplicate recipies
@@ -46,3 +39,8 @@
   // add a sort feature
     // sort by name, time, calories, servings
   // useContext on recipies(maybe)
+  // figure out why I can't refresh RecipieDetails or go directly there with the link
+    // I suspect I need to pass 1 recipie to RecipieDetails
+      // but we don't know which recipie to pass until it gets there.
+      // maybe useContext will solve this problem
+  // Add recipie redirect works, but it won't load(at least partially a state issue)
