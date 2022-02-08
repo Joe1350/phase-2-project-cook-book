@@ -19,12 +19,12 @@ function RecipesPage({ recipes }) {
 
     return (
         <div id="recipe-list">
-            <div id="filter-and-sort">
-                <Filter filterBy={filterBy} onFilterByChange={handleFilterByChange} />
-                {/* <Sort /> */}
-            </div>
             <Switch>
                 <Route exact path="/recipes">
+                    <div id="filter-and-sort">
+                        <Filter filterBy={filterBy} onFilterByChange={handleFilterByChange} />
+                        {/* <Sort /> */}
+                    </div>
                     <RecipesList recipes={recipes} category={filterBy} />
                 </Route>
                 <Route path={`${match.url}/:recipeId`}>
