@@ -11,7 +11,7 @@ My Cook Book is an app for saving and viewing my favorite recipies, or recipies 
     - json-server documents can be viewed at https://www.npmjs.com/package/json-server
 - in the first terminal, type json-server --watch db.json --port 3001 and press enter
 - in the second terminal, type npm start and press enter
-- you can now view my web application
+- the page will open in your default browser, and you can now view my web application
 
 ## Support
 
@@ -24,15 +24,12 @@ My Cook Book is an app for saving and viewing my favorite recipies, or recipies 
 - add a createdAt key in the db
 - add a login feature
 - add a favorite recipies button
-- I'd like to turn the navbar into a square with three lines that opens the navbar and animates to an x
+- I'd like to turn the navbar into a square with three lines that opens the navbar
+    - and animates the three bars into an x
 - add RecipieNotes component
 - add a sort feature
 - useContext on recipies(maybe)
-- figure out why I can't refresh RecipieDetails or go directly there with the link
-    - I suspect I need to pass 1 recipie to RecipieDetails
-    - but i don't know which recipie to pass until it gets there.
-    - maybe useContext will solve this problem
-- fix Add recipie redirect(I suspect it's the same issue as above)
+- bug fixes
 
 ## Contributing
 
