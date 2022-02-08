@@ -9,6 +9,7 @@ function RecipeDetails({ recipes }) {
             directions: ["step"]
         }
     )
+    
     const params = useParams();
 
     useEffect(() => {

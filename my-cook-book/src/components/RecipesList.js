@@ -15,12 +15,12 @@ function RecipeListings({ recipes, category }) {
 
     function filterRecipes() {
         let newRecipes = []
-            recipes.filter(recipe => {
-                if (recipe.category === category) {
-                    newRecipes.push(recipe)
-                }
-            })
-            setFilteredRecipes(newRecipes)
+        recipes.filter(recipe => {
+            if (recipe.category === category) {
+                newRecipes.push(recipe)
+            }
+        })
+        setFilteredRecipes(newRecipes)
     }
 
     useEffect(() => {
