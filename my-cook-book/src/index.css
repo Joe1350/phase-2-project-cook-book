@@ -11,7 +11,7 @@ h2 {
   color: firebrick;
 }
 
-#home, #recipies, #add-a-recipie {
+#home, #recipes, #add-a-recipe {
   display: inline-block;
   width: 100px;
   padding: 12px;
@@ -52,17 +52,17 @@ article {
     margin-bottom: 10px;
 }
 
-#recipie-list {
+#recipe-list {
   margin-top: 25px;
 }
 
-#recipie-listing {
+#recipe-listing {
   display: block;
   width: 70%;
   margin-left: 10%;
 }
 
-#recipie-listing-image {
+#recipe-listing-image {
     width: 150px;
     height: 100%;
     display: block;
@@ -71,7 +71,7 @@ article {
     padding: 10px;
 }
 
-#recipie-listing-details {
+#recipe-listing-details {
   margin-right: 10px;
 }
 
@@ -79,7 +79,7 @@ article {
   color: black;
 }
 
-#recipie-details {
+#recipe-details {
     width: 70%;
     background-color: cornsilk;
     margin-left: 10%;
@@ -87,11 +87,11 @@ article {
     padding: 25px;
 }
 
-#recipie-details-image {
+#recipe-details-image {
   width: 33%;
 }
 
-#recipie-details-description-block {
+#recipe-details-description-block {
     background-color: white;
     width: 70%;
     margin-left: 10%;
@@ -101,12 +101,12 @@ article {
     text-align: center;
 }
 
-#recipie-details-description {
+#recipe-details-description {
   width: 90%;
   margin-left: 5%;
 }
 
-#recipie-ingredients-and-directions {
+#recipe-ingredients-and-directions {
     background-color: white;
     margin-top: 25px;
     border: solid black 1px;

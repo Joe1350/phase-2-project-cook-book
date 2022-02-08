@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 // import { useHistory } from "react-router-dom";
-import RecipieFormDetails from "./RecipieFormDetails";
-import RecipieFormIngredients from "./RecipieFormIngredients";
-import RecipieFormDirections from "./RecipieFormDirections";
+import RecipeFormDetails from "./RecipeFormDetails";
+import RecipeFormIngredients from "./RecipeFormIngredients";
+import RecipeFormDirections from "./RecipeFormDirections";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import { v4 as uuid } from "uuid";
 
-function RecipieForm({ setRecipies }) {
+function RecipeForm({ setRecipes }) {
     const [formData, setFormData] = useState({
         source: "",
         name: "",
@@ -23,7 +23,7 @@ function RecipieForm({ setRecipies }) {
     const [directionsInputList, setDirectionsInputList] = useState([""])
     // const history = useHistory()
 
-    useDocumentTitle("My Cook Book | Add a Recipie")
+    useDocumentTitle("My Cook Book | Add a Recipe")
 
     function handleFormChange(e) {
         setFormData({
@@ -35,7 +35,7 @@ function RecipieForm({ setRecipies }) {
     function handleSubmitForm(e) {
         e.preventDefault()
         let prepTimeInput = formData.prepTime
-        const newRecipie = {
+        const newRecipe = {
             id: uuid(),
             source: formData.source,
             author: formData.author,
@@ -52,38 +52,38 @@ function RecipieForm({ setRecipies }) {
             directions: directionsInputList,
             notes: []
         }
-        fetch("http://localhost:3001/recipies", {
+        fetch("http://localhost:3001/recipes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(newRecipie)
+            body: JSON.stringify(newRecipe)
         })
         .then(r => r.json())
-        .then(newRecipie => setRecipies(newRecipie))
-        // history.push(`/recipies/${newRecipie.id}`)
+        .then(newRecipe => setRecipes(newRecipe))
+        // history.push(`/recipes/${newRecipe.id}`)
     }
 
     return (
         <div id="form">
-            <h2>Add a New Recipie</h2>
+            <h2>Add a New Recipe</h2>
             <form onSubmit={handleSubmitForm}>
-                <RecipieFormDetails
+                <RecipeFormDetails
                     formData={formData}
                     onFormChange={handleFormChange}
                 />
-                <RecipieFormIngredients
+                <RecipeFormIngredients
                     ingredientInputList={ingredientInputList}
                     setIngredientInputList={setIngredientInputList}
                 />
-                <RecipieFormDirections
+                <RecipeFormDirections
                     directionsInputList={directionsInputList}
                     setDirectionsInputList={setDirectionsInputList}
                 />
-                <input id="submit" type="submit" value="Add Recipie"/>
+                <input id="submit" type="submit" value="Add Recipe"/>
             </form>
         </div>
     )
 }
 
-export default RecipieForm;
+export default RecipeForm;

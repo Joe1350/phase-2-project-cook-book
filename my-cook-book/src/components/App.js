@@ -3,8 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import NavBar from "./NavBar";
 import HomePage from "./HomePage";
-import RecipiesPage from "./RecipiesPage";
-import RecipieForm from "./RecipieForm";
+import RecipesPage from "./RecipesPage";
+import RecipeForm from "./RecipeForm";
 
 // index.js
   // App
@@ -12,25 +12,25 @@ import RecipieForm from "./RecipieForm";
     // NavBar
     // Switch/Route
       // HomePage
-      // RecipiesPage
+      // RecipesPage
         // Filter
         // Sort
         // Switch/Route
-          // RecipiesList
-            // RecipieListings
-          // RecipieDetails
-      // RecipieForm
-        // RecipieFormDetails
-        // RecipieFormIngredients
-        // RecipieFormDirections
+          // RecipesList
+            // RecipeListings
+          // RecipeDetails
+      // RecipeForm
+        // RecipeFormDetails
+        // RecipeFormIngredients
+        // RecipeFormDirections
 
 function App() {
-  const [recipies, setRecipies] = useState([])
+  const [recipes, setRecipes] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3001/recipies")
+    fetch("http://localhost:3001/recipes")
     .then(r => r.json())
-    .then(setRecipies)
+    .then(setRecipes)
   }, [])
 
   return (
@@ -38,11 +38,11 @@ function App() {
       <Header />
       <NavBar />
       <Switch>
-        <Route path="/recipies">
-          <RecipiesPage recipies={recipies} />
+        <Route path="/recipes">
+          <RecipesPage recipes={recipes} />
         </Route>
-        <Route path="/add-a-recipie">
-          <RecipieForm setRecipies={setRecipies} />
+        <Route path="/add-a-recipe">
+          <RecipeForm setRecipes={setRecipes} />
         </Route>
         <Route exact path="/">
           <HomePage />

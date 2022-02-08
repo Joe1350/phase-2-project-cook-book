@@ -2,37 +2,37 @@ import React, { useState } from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 import Filter from "./Filter";
 // import Sort from "./Sort";
-import RecipiesList from "./RecipiesList";
-import RecipieDetails from "./RecipieDetails";
+import RecipesList from "./RecipesList";
+import RecipeDetails from "./RecipeDetails";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
-function RecipiesPage({ recipies }) {
+function RecipesPage({ recipes }) {
     const [filterBy, setFilterBy] = useState("all")
 
     const match = useRouteMatch()
 
-    useDocumentTitle("My Cook Book | Recipies")
+    useDocumentTitle("My Cook Book | Recipes")
 
     function handleFilterByChange(e) {
         setFilterBy(e.target.value)
     }
 
     return (
-        <div id="recipie-list">
+        <div id="recipe-list">
             <div id="filter-and-sort">
                 <Filter filterBy={filterBy} onFilterByChange={handleFilterByChange} />
                 {/* <Sort /> */}
             </div>
             <Switch>
-                <Route exact path="/recipies">
-                    <RecipiesList recipies={recipies} category={filterBy} />
+                <Route exact path="/recipes">
+                    <RecipesList recipes={recipes} category={filterBy} />
                 </Route>
-                <Route path={`${match.url}/:recipieId`}>
-                    <RecipieDetails recipies={recipies} />
+                <Route path={`${match.url}/:recipeId`}>
+                    <RecipeDetails recipes={recipes} />
                 </Route>
             </Switch>
         </div>
     )
 }
 
-export default RecipiesPage;
+export default RecipesPage;

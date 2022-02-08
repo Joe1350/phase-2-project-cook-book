@@ -19,19 +19,19 @@ function NavBar() {
                 Home
             </NavLink>
             <NavLink
-                id="recipies"
-                to="/recipies"
+                id="recipes"
+                to="/recipes"
                 activeStyle={activeStyles}
             >
-                Recipies
+                Recipes
             </NavLink>
             <NavLink
-                id="add-a-recipie"
-                to="/add-a-recipie"
+                id="add-a-recipe"
+                to="/add-a-recipe"
                 exact
                 activeStyle={activeStyles}
             >
-                Add a Recipie
+                Add a Recipe
             </NavLink>
         </div>
     )

@@ -1,6 +1,6 @@
 import React from "react";
 
-function RecipieFormDirections({ directionsInputList, setDirectionsInputList }) {
+function RecipeFormDirections({ directionsInputList, setDirectionsInputList }) {
     function handleDirectionInputChange(e, index) {
         const directionsList = [...directionsInputList]
         directionsList[index] = e.target.value
@@ -57,4 +57,4 @@ function RecipieFormDirections({ directionsInputList, setDirectionsInputList }) 
     )
 }
 
-export default RecipieFormDirections;
+export default RecipeFormDirections;

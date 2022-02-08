@@ -1,6 +1,6 @@
 import React from "react";
 
-function RecipieFormIngredients({ ingredientInputList, setIngredientInputList }) {
+function RecipeFormIngredients({ ingredientInputList, setIngredientInputList }) {
     function handleIngredientInputChange(e, index) {
         const ingredientsList = [...ingredientInputList]
         ingredientsList[index] = e.target.value
@@ -60,4 +60,4 @@ function RecipieFormIngredients({ ingredientInputList, setIngredientInputList })
     )
 }
 
-export default RecipieFormIngredients;
+export default RecipeFormIngredients;

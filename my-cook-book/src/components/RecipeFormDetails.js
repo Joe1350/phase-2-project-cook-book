@@ -1,6 +1,6 @@
 import React from "react";
 
-function RecipieFormDetails({ formData, onFormChange }) {
+function RecipeFormDetails({ formData, onFormChange }) {
     return (
         <div>
             <label htmlFor="name">Name: </label>
@@ -8,7 +8,7 @@ function RecipieFormDetails({ formData, onFormChange }) {
                 type="text"
                 name="name"
                 id="name"
-                placeholder="Recipie name"
+                placeholder="Recipe name"
                 value={formData.name}
                 onChange={onFormChange}
                 required
@@ -48,7 +48,7 @@ function RecipieFormDetails({ formData, onFormChange }) {
                 type="text"
                 name="source"
                 id="source"
-                placeholder="Where is this recipie from"
+                placeholder="Where is this recipe from"
                 value={formData.source}
                 onChange={onFormChange}
             />
@@ -58,7 +58,7 @@ function RecipieFormDetails({ formData, onFormChange }) {
                 type="text"
                 name="author"
                 id="author"
-                placeholder="Who created this recipie"
+                placeholder="Who created this recipe"
                 value={formData.author}
                 onChange={onFormChange}
                 required
@@ -126,4 +126,4 @@ function RecipieFormDetails({ formData, onFormChange }) {
     )
 }
 
-export default RecipieFormDetails;
+export default RecipeFormDetails;
