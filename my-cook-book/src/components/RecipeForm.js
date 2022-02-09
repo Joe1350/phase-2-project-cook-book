@@ -61,7 +61,7 @@ function RecipeForm({ onAddRecipe }) {
         })
         .then(r => r.json())
         .then(newRecipe => onAddRecipe(newRecipe))
-        history.push(`/recipes`) // /${newRecipe.id}`)
+        history.push('/')// history.push(`/recipes`) // /${newRecipe.id}`)
     }
 
     return (
