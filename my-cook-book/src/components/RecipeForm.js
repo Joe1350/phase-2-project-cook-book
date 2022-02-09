@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import RecipeFormDetails from "./RecipeFormDetails";
 import RecipeFormIngredients from "./RecipeFormIngredients";
 import RecipeFormDirections from "./RecipeFormDirections";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 import { v4 as uuid } from "uuid";
 
-function RecipeForm({ setRecipes }) {
+function RecipeForm({ onAddRecipe }) {
     const [formData, setFormData] = useState({
         source: "",
         name: "",
@@ -21,7 +21,7 @@ function RecipeForm({ setRecipes }) {
     })
     const [ingredientInputList, setIngredientInputList] = useState([""])
     const [directionsInputList, setDirectionsInputList] = useState([""])
-    // const history = useHistory()
+    const history = useHistory()
 
     useDocumentTitle("My Cook Book | Add a Recipe")
 
@@ -60,8 +60,8 @@ function RecipeForm({ setRecipes }) {
             body: JSON.stringify(newRecipe)
         })
         .then(r => r.json())
-        .then(newRecipe => setRecipes(newRecipe))
-        // history.push(`/recipes/${newRecipe.id}`)
+        .then(newRecipe => onAddRecipe(newRecipe))
+        history.push(`/recipes`) // /${newRecipe.id}`)
     }
 
     return (

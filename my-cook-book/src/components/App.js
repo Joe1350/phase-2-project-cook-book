@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import HomePage from "./HomePage";
 import RecipesPage from "./RecipesPage";
 import RecipeForm from "./RecipeForm";
+import RecipeList from "./RecipesList";
 
 // index.js
   // App
@@ -33,6 +34,10 @@ function App() {
     .then(setRecipes)
   }, [])
 
+  function handleAddRecipe(newRecipe) {
+    setRecipes(...recipes, newRecipe)
+  }
+
   return (
     <div>
       <Header />
@@ -42,7 +47,7 @@ function App() {
           <RecipesPage recipes={recipes} />
         </Route>
         <Route path="/add-a-recipe">
-          <RecipeForm setRecipes={setRecipes} />
+          <RecipeForm onAddRecipe={handleAddRecipe} />
         </Route>
         <Route exact path="/">
           <HomePage />
